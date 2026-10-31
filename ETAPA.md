@@ -1,3 +1,3 @@
-# Etapa 6: testes
+# Etapa 7: entrega
 
-Testes Jest/Supertest, matriz de transições, entradas inválidas, isolamento de memória e erros 500. Workflow de CI incluído; na etapa 07 ele ganha a coleção Postman necessária para completar o job.
+Coleção Postman, automação Newman, registros HTTP reais, documentação completa e roteiro de entrega. Capturas reais do Postman, commits revisados e publicação devem ser feitos com sua conta.
