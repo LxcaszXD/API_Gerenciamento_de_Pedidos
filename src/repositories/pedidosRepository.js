@@ -1,3 +1,4 @@
+// Uma instância por aplicação; não expõe referências mutáveis do armazenamento.
 class PedidosRepository {
   constructor() {
     this.pedidos = new Map();

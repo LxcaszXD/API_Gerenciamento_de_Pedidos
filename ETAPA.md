@@ -1,3 +1,3 @@
-# Etapa 3: consulta-erros
+# Etapa 4: validacoes
 
-RF03: consulta por ID, respostas 400/404, erro centralizado e resposta 500 sem expor detalhes internos.
+Validação de cliente, valor finito positivo, tipo e prioridade; rejeição de campos desconhecidos e IDs inválidos. Regras do domínio e validadores separados.

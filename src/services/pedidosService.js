@@ -1,20 +1,17 @@
 const { ApiError } = require('../errors/ApiError');
+const { validarCriacao, validarId, validarStatus } = require('../validators/pedidoValidator');
+const { TRANSICOES } = require('../domain/pedidoRules');
 class PedidosService {
   constructor(repository) { this.repository = repository; }
   criar(dados) {
-    return this.repository.criar({
-      cliente: dados.cliente, tipo: dados.tipo, valor: dados.valor,
-      prioridade: dados.prioridade, status: 'recebido',
-    });
+    return this.repository.criar({ ...validarCriacao(dados), status: 'recebido' });
   }
+  listar() { return this.repository.listar(); }
   consultar(rawId) {
-    if (!/^[1-9]\d*$/.test(rawId) || !Number.isSafeInteger(Number(rawId))) {
-      throw new ApiError(400, 'ID deve ser um inteiro positivo seguro.');
-    }
-    const pedido = this.repository.buscar(Number(rawId));
+    const pedido = this.repository.buscar(validarId(rawId));
     if (!pedido) throw new ApiError(404, 'Pedido não encontrado.');
     return pedido;
   }
-  listar() { return this.repository.listar(); }
+  // ATUALIZAR
 }
 module.exports = { PedidosService };
