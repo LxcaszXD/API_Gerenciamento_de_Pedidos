@@ -6,7 +6,7 @@ function createPedidosRoutes(service) {
   router.post('/', controller.criar);
   router.get('/', controller.listar);
   router.get('/:id', controller.consultar);
-  // STATUS
+  router.patch('/:id/status', controller.atualizarStatus);
   return router;
 }
 module.exports = { createPedidosRoutes };

@@ -1,3 +1,3 @@
-# Etapa 4: validacoes
+# Etapa 5: status
 
-Validação de cliente, valor finito positivo, tipo e prioridade; rejeição de campos desconhecidos e IDs inválidos. Regras do domínio e validadores separados.
+RF04: atualização com transições explícitas; entregue e cancelado são estados finais. Rejeições não alteram o pedido.

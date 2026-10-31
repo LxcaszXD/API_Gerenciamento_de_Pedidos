@@ -12,6 +12,13 @@ class PedidosService {
     if (!pedido) throw new ApiError(404, 'Pedido não encontrado.');
     return pedido;
   }
-  // ATUALIZAR
+  atualizarStatus(rawId, dados) {
+    const pedido = this.consultar(rawId);
+    const status = validarStatus(dados);
+    if (!TRANSICOES[pedido.status].includes(status)) {
+      throw new ApiError(400, `Transição de ${pedido.status} para ${status} não permitida.`);
+    }
+    return this.repository.atualizarStatus(pedido.id, status);
+  }
 }
 module.exports = { PedidosService };

@@ -1,6 +1,5 @@
 const TIPOS = Object.freeze(['entrega', 'retirada']);
 const PRIORIDADES = Object.freeze(['normal', 'alta']);
-// Não se pode pular etapas, reabrir estados finais ou cancelar após envio.
 const TRANSICOES = Object.freeze({
   recebido: Object.freeze(['em_preparacao', 'cancelado']),
   em_preparacao: Object.freeze(['enviado', 'cancelado']),
