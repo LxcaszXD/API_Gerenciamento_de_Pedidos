@@ -1,3 +1,3 @@
-# Etapa 5: status
+# Etapa 6: testes
 
-RF04: atualização com transições explícitas; entregue e cancelado são estados finais. Rejeições não alteram o pedido.
+Testes Jest/Supertest, matriz de transições, entradas inválidas, isolamento de memória e erros 500. Workflow de CI incluído; na etapa 07 ele ganha a coleção Postman necessária para completar o job.
