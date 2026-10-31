@@ -1,0 +1,25 @@
+{
+  "name": "api-gerenciamento-pedidos",
+  "version": "1.0.0",
+  "description": "API REST acadêmica de gerenciamento de pedidos em camadas.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [],
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "jest": "^30.5.2",
+    "newman": "^6.2.3",
+    "supertest": "^7.3.1"
+  }
+}
