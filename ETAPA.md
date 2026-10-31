@@ -1,3 +1,3 @@
-# Etapa 2: cadastro-listagem
+# Etapa 3: consulta-erros
 
-RF01 e RF02: fluxo básico de criação (201) e listagem (200), status inicial recebido e armazenamento em memória. Validações completas entram na etapa 04.
+RF03: consulta por ID, respostas 400/404, erro centralizado e resposta 500 sem expor detalhes internos.
